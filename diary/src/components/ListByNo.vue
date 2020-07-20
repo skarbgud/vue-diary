@@ -49,11 +49,7 @@ export default {
   data() {
     return {
       lists: this.$store.state.list,    //이 리스트의 값을 store의 리스트값으로 넣는다.
-      no: 0
     };
-  },
-  created: function() {
-    this.no = this.$route.params.no;    //no을 받기위해 라우터의 파라미터 no값을 저장
   },
   computed:{
     getDate(){  //날짜는 계산된 채로 불러오기 때문에 계산된 값으로 computed에 넣어서 캐싱처리
@@ -81,6 +77,7 @@ export default {
       return ('el-icon-'+this.lists[this.no].weather);
     }
   },
+  props:['no'],
   methods: {
     back(){ //뒤로가기 버튼: 목록으로 전환
       let router = this.$router;

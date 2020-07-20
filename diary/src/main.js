@@ -25,7 +25,7 @@ const router = new VueRouter({
             children: [
                 { path: '/', component: DiaryList },
                 { path: 'write/:no?', component: DiaryWrite},    //no파라미터로 수정 게시글 번호 받음
-                { path: ':no', component: ListByNo }
+                { path: ':no', component: ListByNo, props:true }
             ]
         }
     ]
