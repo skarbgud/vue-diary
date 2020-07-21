@@ -1,21 +1,18 @@
 <template>
 <div class="form">
-  <el-row class="center">
-    <el-row>
-      <el-col>
-        <span>vue-diary</span>
-      </el-col>
-    </el-row>
-    
-    <el-row>
+  <div class="center">
+    <div>
+      <span>vue-diary</span>   
+    </div>
+
+    <div>
      <el-input label="사용자" placeholder="사용자 이름 (남규형 입력)" v-model="name" v-on:keyup.enter.native="login()"></el-input>
-    </el-row>
+    </div>
 
-    <el-row>   <!--로그인 버튼-->
+    <div>   <!--로그인 버튼-->
       <el-button type="info" size="medium"  @click="login" class="button-style">Sign In</el-button>
-    </el-row>
-
-  </el-row>
+    </div>
+  </div>
 </div>
 </template>
 
@@ -60,6 +57,9 @@ export default {
     background-color:white; 
     padding: 10px 60px 10px 60px; 
     text-align:center;
+  }
+  .center div{
+    margin-bottom: 6px;
   }
   .el-row{
     margin: 10px;

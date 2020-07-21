@@ -99,8 +99,14 @@ export default {
           let router = this.$router;
 
           if(this.no!=null){  //라우터 값이 있어서 no값이 null이 아니면
-            let listItem ={"no":this.no,"title":this.ruleForm.title,"content":this.ruleForm.content,
-                          "date":date,"weather":this.ruleForm.weather,"feel":this.ruleForm.feel};
+            let listItem ={
+                          'no':this.no,
+                          'title':this.ruleForm.title,
+                          'content':this.ruleForm.content,
+                          date,
+                          'weather':this.ruleForm.weather,
+                          'feel':this.ruleForm.feel
+                          };
             this.$store.commit(constant.REVISE_DIARY, {list:listItem});
             this.$message({ //수정 메세지 출력
               type:'info',
@@ -109,12 +115,12 @@ export default {
           }
           else{   //현재글이 수정이 아니라 처음 작성이라면 
             this.$store.state.list.push({ //store의 리스트에 no,title,content,date,weather,feel를 넣는다
-              "no": this.$store.state.no++, //no값을 처음에 0을 통해 넣고 ++을 통한 증감 연산자를 통해서 다음 값을 증가해서 다음 등록때에는 no값이 증가
-              "title": this.ruleForm.title,
-              "content": this.ruleForm.content,
-              "date": date,
-              "weather":this.ruleForm.weather,
-              "feel":this.ruleForm.feel
+              'no': this.$store.state.no++, //no값을 처음에 0을 통해 넣고 ++을 통한 증감 연산자를 통해서 다음 값을 증가해서 다음 등록때에는 no값이 증가
+              'title': this.ruleForm.title,
+              'content': this.ruleForm.content,
+              date,
+              'weather':this.ruleForm.weather,
+              'feel':this.ruleForm.feel
             });
             this.$message({ //작성 메세지 출력
               type:'info',
