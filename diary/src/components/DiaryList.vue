@@ -131,11 +131,11 @@ export default {
       let hours = this.lists[index].date.getHours();
       let minutes = this.lists[index].date.getMinutes();
       
-      if(minutes < 10) {minutes = "0"+minutes;}
+      if(minutes < 10) {minutes = `0${minites}`;}
 
       if(hours > 12){
         hours = hours-12;
-        if(hours < 10) {hours = "0"+hours;}
+        if(hours < 10) {hours = `0${hours}`;}
         date = `${this.getDateTime(index)}
                 오후 ${hours}시 ${minutes}분 작성`;
       }

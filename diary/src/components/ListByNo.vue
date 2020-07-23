@@ -60,15 +60,15 @@ export default {
       let hours = this.lists[this.no].date.getHours();
       let minutes = this.lists[this.no].date.getMinutes();
       
-      if(minutes < 10) {minutes = "0"+minutes;}
+      if(minutes < 10) {minutes = `0${minites}`;}
       
       if(hours > 12){
         hours = hours-12;
-        if(hours < 10) {hours = "0"+hours;}
+        if(hours < 10) {hours = `0${hours}`;}
         dateDay = `${yearMonthDay} 오후 ${hours}시 ${minutes}분`;
       }
       else{
-        if(hours < 10) {hours = "0"+hours;}
+        if(hours < 10) {hours = `0${hours}`;}
         dateDay = `${yearMonthDay} 오전 ${hours}시 ${minutes}분`;
       }
       return dateDay;
