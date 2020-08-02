@@ -1,26 +1,18 @@
 <template>
   <table>
-    zzzz
-    <tr-component
-      v-for="(rowData, index) in tableData"
-      :row-data="rowData"
-      :row-index="index"
-    ></tr-component>
+    <tr-component v-for="(rowData, index) in tableData" :key="index" :row-data="rowData" :row-index="index"></tr-component>
   </table>
 </template>
 
 <script>
-import TrComponents from "./TrComponents.vue";
+import TrComponent from "./TrComponent";
+
 export default {
   props: {
     tableData: Array,
   },
   components: {
-    TrComponents,
+    TrComponent,
   },
-  data() {
-    return {};
-  },
-  methods: {},
 };
 </script>
