@@ -16,6 +16,7 @@ Vue.use(ElementUI, { locale })
 Vue.use(VueRouter);
 
 const router = new VueRouter({
+    mode: 'history',
     routes: [
         { path: '/', redirect: '/login' },
         { path: '/login', component: LoginForm },
