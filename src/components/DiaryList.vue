@@ -131,7 +131,7 @@ export default {
       let hours = this.lists[index].date.getHours();
       let minutes = this.lists[index].date.getMinutes();
       
-      if(minutes < 10) {minutes = `0${minites}`;}
+      if(minutes < 10) {minutes = `0${minutes}`;}
 
       if(hours > 12){
         hours = hours-12;
